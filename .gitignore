@@ -1,0 +1,26 @@
+# Dependencias y build
+node_modules/
+dist/
+
+# Credenciales y configuración local (NUNCA subir)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.ppk
+id_rsa*
+id_ed25519*
+id_ecdsa*
+
+# Copias de seguridad locales (contienen contenido del sitio y dumps de BD)
+backups/
+*.sql
+*.sql.gz
+
+# Varios
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

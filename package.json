@@ -1,0 +1,45 @@
+{
+  "name": "wordpress-mcp",
+  "version": "0.1.0",
+  "description": "Servidor MCP local para administrar un WordPress self-hosted vía REST API + SSH/WP-CLI",
+  "author": "Juan David Viveros Chavez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notjuanda/wordpress-mcp.git"
+  },
+  "homepage": "https://github.com/notjuanda/wordpress-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/notjuanda/wordpress-mcp/issues"
+  },
+  "keywords": ["mcp", "model-context-protocol", "wordpress", "elementor", "wp-cli", "claude", "ai"],
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "wordpress-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "check": "node dist/check.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "diff": "^9.0.0",
+    "ssh2": "^1.17.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/ssh2": "^1.15.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
